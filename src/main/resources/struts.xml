@@ -32,7 +32,7 @@
         <action name="underconstruction">
             <result>/404.html</result>
         </action>
-
+        <!--Hello类演示-->
         <action name="dohello" class="cn.tekin.action.Hello">
             <result name="ok">result.jsp</result><!-- 返回成功后跳转到sresult.jsp 下-->
         </action>
@@ -42,12 +42,14 @@
 
     </package>
 
+<!--package name的值为包的识别名称，仅用于包的继承等的识别，namespace可理解为包的分类目录，直接包含在最终的URL中，
+    struts-default为 struts2默认定义的包名称【文件位于struts2核心包根目录 struts-default.xml】-->
     <package name="user" namespace="/user" extends="struts-default">
-
+        <!--不加class 直接显示result的文件内容, URI: /user/login1 -->
         <action name="login1">
             <result>/user/login1.jsp</result>
         </action>
-
+        <!--访问action后将直接调度到 指定的class和方法,[ ok , fail为自己在class类中自定义的返回字符串] URI: /user/checklogin1 -->
         <action name="checklogin1" class="cn.tekin.action.Login" method="login">
             <result name="ok">/user/success.jsp</result>
             <result name="fail">/user/failure.jsp</result>

@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="java-struts2-simple-demo" />
         <module name="st2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="java-struts2-simple-demo" target="1.8" />
       <module name="st2" target="1.8" />
     </bytecodeTargetLevel>
   </component>
