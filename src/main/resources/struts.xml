@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+    <!--struts2常量配置-->
+    <!--是否使用Struts2的开发模式，可以获得更多报错信息，便于调试。在开发阶段设置为true。默认值false-->
+    <constant name="struts.devMode" value="true"/>
+    <!--设置编码形式为UTF-8-->
+    <constant name="struts.i18n.encoding" value="UTF-8"/>
+    <!--#是否每次HTTP请求到达时，都重新加载国际化资源文件。默认值false-->
+    <constant name="struts.i18n.reload" value="true"/>
+    <!--#struts.xml改动后，是否重新加载该文件。在开发阶段建议将此属性设置为“true”，提高开发效率。默认值false-->
+    <constant name="struts.configuration.xml.reload" value="true"/>
+    <!--设置浏览器是否缓存静态页面。开发阶段设置为false，以获得服务器的最新响应。默认值true-->
+    <constant name="struts.serve.static.browserCache" value="false"/>
+    <!--设置action的访问后缀名可被Struts2处理。可配置多个请求后缀，比如.do、.struts2等，配置时多个后缀名用逗号隔开: 如 同时支持 x.do 或者 x.jsf ：do,jsf,, -->
+    <constant name="struts.action.extension" value="do,jsf,,"/>
+    <!--设置动态方法调用，为true时，就可以在struts.xml配置“*”的通配符，来调用action里的方法;
+    如：<action name="login_*" method="{1}"class="com.zhang.action.LoginAction">  -->
+    <constant name="struts.enable.DynamicMethodInvocation" value="true"/>
+
+    <!--上面的constant配置信息也可以在 struts.properties 文件中配置，配置方式稍有不同，如：struts.enable.DynamicMethodInvocation=true-->
+
+    <!--包配置，包通过名称和namespace来区分唯一性，访问URL如： {namespace}/{action_name} -->
+    <package name="default" namespace="/" extends="struts-default">
+        <!--设置默认的action页面-->
+        <default-action-ref name="underconstruction"></default-action-ref>
+        <action name="underconstruction">
+            <result>/404.html</result>
+        </action>
+
+        <action name="dohello" class="cn.tekin.action.Hello">
+            <result name="ok">result.jsp</result><!-- 返回成功后跳转到sresult.jsp 下-->
+        </action>
+        <action name="dotest" class="cn.tekin.action.Hello" method="testStr">
+            <result name="ok">result_str.jsp</result><!-- 返回成功后跳转到sresult.jsp 下-->
+        </action>
+
+    </package>
+
+    <package name="user" namespace="/user" extends="struts-default">
+
+        <action name="login1">
+            <result>/user/login1.jsp</result>
+        </action>
+
+        <action name="checklogin1" class="cn.tekin.action.Login" method="login">
+            <result name="ok">/user/success.jsp</result>
+            <result name="fail">/user/failure.jsp</result>
+        </action>
+
+        <action name="login2">
+            <result>/user/login2.jsp</result>
+        </action>
+
+        <action name="checklogin2" class="cn.tekin.action.CheckLogin" method="execute">
+            <result name="ok">/user/success.jsp</result>
+            <result name="fail">/user/failure.jsp</result>
+        </action>
+    </package>
+</struts>
