@@ -1,7 +1,7 @@
 # java-struts2-simple-demo
 java struts2 simple demo with maven ， java9 jdk9.0 supported
 
-    运行环境:
+    **运行环境:**
     IDEA 2017 3.3
     Tomcat 9.0
     jdk 9
