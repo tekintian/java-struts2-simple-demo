@@ -1,15 +1,19 @@
 # java-struts2-simple-demo
-java struts2 simple demo with maven ， java9 jdk9.0 supported
+java struts2 simple demo with maven ， java9 jdk9.0 supported 
 
-    **运行环境:**
-    IDEA 2017 3.3
-    Tomcat 9.0
-    jdk 9
-    maven 3.5.3
+***
 
+## 运行环境:
+ -   IDEA 2017 3.3
+ -   Tomcat 9.0
+ -   jdk 9
+ -   maven 3.5.3
+
+***
 
 ## category tree
 
+```markdown
     ├─.idea  IDEA编辑器的工程文件
     │  ├─artifacts
     │  ├─inspectionProfiles
@@ -32,8 +36,11 @@ java struts2 simple demo with maven ， java9 jdk9.0 supported
     │      ├─java 测试类文件
     │      └─resources 资源文件
     └─target 编译后的文件存放目录
+```
 
 
+ 1. JAVA技术交流讨论QQ群：109857332
+ 2. [Github](http://tekin.yunnan.ws/)
 
-JAVA技术交流讨论QQ群：109857332
+***
 
