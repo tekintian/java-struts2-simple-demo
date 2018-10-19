@@ -12,7 +12,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jstlVersion>1.2.2</jstlVersion>
         <javaeeapiVersion>7.0</javaeeapiVersion>
-        <struts2coreVersion>2.5.14.1</struts2coreVersion>
+        <struts2coreVersion>2.5.17</struts2coreVersion>
         <junitVersion>4.12</junitVersion>
     </properties>
     <dependencies>
